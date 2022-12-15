@@ -80,6 +80,7 @@ public class MovieDetailsFragmentMain extends Fragment {
                         });
 
                         getActivity().runOnUiThread(() -> {
+                            //Snackerbar when removing from favourtes
                             Snackbar.make(
                                             getActivity().getWindow().getDecorView().findViewById(R.id.mainMovieRecycler),
                                             "You deleted " + selectedMovie.getName(),

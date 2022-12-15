@@ -50,7 +50,7 @@ public class MovieDetailsFragment extends Fragment {
         //Set Binding
         MovieDetailsViewBinding binding = MovieDetailsViewBinding.inflate(inflater);
 
-        //Set class variables for database access
+        //DB access variables
         database = Room.databaseBuilder(getContext(), MovieDatabase.class, "Movies")
                 .build();
         movieDAO = database.movieDAO();
@@ -104,13 +104,13 @@ public class MovieDetailsFragment extends Fragment {
 
         binding.fragMovieAddFavouriteButton.setOnClickListener(click -> {
 
-            //Add movie to local database
+            //Saving movie
             Executor databaseThread = Executors.newSingleThreadExecutor();
             databaseThread.execute(() -> {
                 movieDAO.insertMovie(selectedMovie);
             });
 
-            //Toast message added to favourite
+            //display toast message when adding to favourites
             Toast.makeText(
                     getContext(),
                     String.format("%s added to favourites", selectedMovie.getName()),
