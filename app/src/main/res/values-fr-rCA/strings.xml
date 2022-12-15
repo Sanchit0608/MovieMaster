@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ratingMessage">Évaluation:</string>
+    <string name="app_name">MovieMaster</string>
+    <string name="search_string">Chercher</string>
+    <string name="send_button">Envoyer</string>
+    <string name="type_message">Catégorie:</string>
+    <string name="add_string">Ajouter</string>
+    <string name="search_hint">Entrez le film ici</string>
+    <string name="title_activity_home">Activité à domicile</string>
+    <string name="my_favourites_string">" Mes préférés"</string>
+    <string name="nav_header_title">Studio Android</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">En-tête de navigation</string>
+    <string name="action_settings">Réglages</string>
+    <string name="yearString">Intrigue</string>
+    <string name="plotMessage">Intrigue:</string>
+    <string name="actorsString">Acteurs</string>
+    <string name="runtimeString">Durée</string>
+    <string name="ratedString">Classification du film:</string>
+</resources>
