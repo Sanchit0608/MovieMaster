@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import algonquin.cst2335.moviemaster.databinding.FragmentHomeBinding;
+import algonquin.cst2335.moviemaster.databinding.FragmentSearchresultsBinding;
 
-public class HomeFragment extends Fragment {
+public class SearchResultsFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentSearchresultsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        SearchResultsViewModel searchResultsViewModel =
+                new ViewModelProvider(this).get(SearchResultsViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentSearchresultsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        searchResultsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

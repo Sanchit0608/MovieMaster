@@ -23,7 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import algonquin.cst2335.moviemaster.R;
 import algonquin.cst2335.moviemaster.databinding.ActivityHomeBinding;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class SearchResultsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
@@ -69,7 +69,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.nickMovieApp) {
+        if(id == R.id.movieMaster) {
             startActivity(new Intent(this, MainActivity.class));
         }
 

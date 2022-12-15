@@ -37,7 +37,7 @@ import java.util.concurrent.Executors;
 
 import algonquin.cst2335.moviemaster.R;
 import algonquin.cst2335.moviemaster.databinding.ActivitySearchBinding;
-import algonquin.cst2335.moviemaster.databinding.MovieViewBinding;
+import algonquin.cst2335.moviemaster.databinding.MovieTileViewBinding;
 import algonquin.cst2335.moviemaster.model.Movie;
 import algonquin.cst2335.moviemaster.model.MovieBuilder;
 import algonquin.cst2335.moviemaster.model.MovieDetailsFragment;
@@ -65,6 +65,9 @@ public class SearchActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(SearchActivityViewModel.class);
         movies = viewModel.movies.getValue();
 
+        SharedPreferences savedMoviePrefs = getSharedPreferences("myData", Context.MODE_PRIVATE);
+        binding.movieSearch.setText(savedMoviePrefs.getString("movieName", ""));
+
         requestQueue = Volley.newRequestQueue(this);
 
         viewModel.selectedMovie.observe(this, (newMovieValue) -> {
@@ -80,7 +83,7 @@ public class SearchActivity extends AppCompatActivity {
             @NonNull
             @Override
             public SearchMovieRow onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                MovieViewBinding binding = MovieViewBinding.inflate(getLayoutInflater());
+                MovieTileViewBinding binding = MovieTileViewBinding.inflate(getLayoutInflater());
                 return new SearchMovieRow(binding.getRoot());
             }
 
@@ -114,6 +117,8 @@ public class SearchActivity extends AppCompatActivity {
         binding.movieRecycler.setLayoutManager(new GridLayoutManager(this, 1));
 
         binding.searchButton.setOnClickListener(click -> {
+
+            //Added check for when user searches an empty string/puts in no input and hits search button
             String movieSearchString = binding.movieSearch.getText().toString().trim();
             if (movieSearchString.isEmpty()){
                 new AlertDialog.Builder(this)
@@ -184,7 +189,10 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 //    private void searchMovie(String movieName) {
-//        TODO: Add previously typed search term when navigating to search window and call search again on first render
+//        //TODO: Add previously typed search term when navigating to search window and call search again on first render
+//        SharedPreferences savedMoviePrefs = getSharedPreferences("myData", Context.MODE_PRIVATE);
+//        binding.movieSearch.setText(savedMoviePrefs.getString("movieName", ""));
+//
 //    }
 
 

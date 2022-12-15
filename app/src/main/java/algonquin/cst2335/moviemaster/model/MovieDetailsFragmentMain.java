@@ -68,6 +68,7 @@ public class MovieDetailsFragmentMain extends Fragment {
                                     " from your favourites?"
                     )
                     .setPositiveButton("Yes", (dialog, ck) -> {
+
                         //Remove movie from local database
                         Executor databaseThread = Executors.newSingleThreadExecutor();
                         databaseThread.execute(() -> {

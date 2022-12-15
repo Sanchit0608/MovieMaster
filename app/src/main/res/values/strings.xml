@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">MovieMaster</string>
+    <string name="app_name">Movie Master</string>
     <string name="search_string">Search</string>
     <string name="ratingMessage">Rating:</string>
-    <string name="search_hint">Enter movie here</string>
+    <string name="search_hint">Search for a movie</string>
     <string name="type_message">Type:</string>
     <string name="add_string">Add</string>
-    <string name="my_favourites_string">My Favourites</string>
+    <string name="my_favourites_string">Favourites</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,10 +17,10 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="plotMessage">Plot:</string>
-    <string name="yearString">Year:</string>
-    <string name="actorsString">Actors:</string>
+    <string name="plotMessage">Plot</string>
+   <string name="yearString">Year:</string>
     <string name="runtimeString">Runtime:</string>
-    <string name="ratedString">Rated:</string>
+    <string name="ratingString">Rating:</string>
     <string name="send_button">Send</string>
+    <string name="pg_13">PG-13</string>
 </resources>

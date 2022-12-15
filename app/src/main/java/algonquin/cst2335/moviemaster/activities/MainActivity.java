@@ -28,7 +28,7 @@ import java.util.concurrent.Executors;
 import algonquin.cst2335.moviemaster.R;
 import algonquin.cst2335.moviemaster.database.MovieDatabase;
 import algonquin.cst2335.moviemaster.databinding.ActivityMainBinding;
-import algonquin.cst2335.moviemaster.databinding.MovieViewBinding;
+import algonquin.cst2335.moviemaster.databinding.MovieTileViewBinding;
 import algonquin.cst2335.moviemaster.model.MainActivityViewModel;
 import algonquin.cst2335.moviemaster.model.Movie;
 import algonquin.cst2335.moviemaster.model.MovieDetailsFragmentMain;
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             @NonNull
             @Override
             public MovieRow onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                MovieViewBinding binding = MovieViewBinding.inflate(getLayoutInflater());
+                MovieTileViewBinding binding = MovieTileViewBinding.inflate(getLayoutInflater());
                 return new MovieRow(binding.getRoot());
             }
 
